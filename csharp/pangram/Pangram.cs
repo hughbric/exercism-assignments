@@ -6,7 +6,8 @@ public static class Pangram
     {
         for (char letter = 'a'; letter <= 'z'; letter++)
         {
-            if (!input.Contains(letter))
+            string lowercaseInput = input.ToLower();
+            if (!lowercaseInput.Contains(letter))
             {
                 return false;
             }
