@@ -16,7 +16,7 @@ public class PangramTest
         Assert.True(Pangram.IsPangram("abcdefghijklmnopqrstuvwxyz"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Only_lower_case()
     {
         Assert.True(Pangram.IsPangram("the quick brown fox jumps over the lazy dog"));

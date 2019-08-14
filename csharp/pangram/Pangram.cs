@@ -4,13 +4,13 @@ public static class Pangram
 {
     public static bool IsPangram(string input)
     {
-        if (input.Contains("abcdefghijklmnopqrstuvwxyz"))
+        for (char letter = 'a'; letter <= 'z'; letter++)
         {
-            return true;
+            if (!input.Contains(letter))
+            {
+                return false;
+            }
         }
-        else
-        {
-            return false;
-        }
+      return true;
     }
 }
