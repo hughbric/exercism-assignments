@@ -2,8 +2,8 @@
 
 public static class TwoFer
 {
-    public static string Speak(string name = "")
+    public static string Speak(string name = "you")
     {
-        return $"One for {(string.IsNullOrEmpty(name) ? "you" : name)}, one for me.";
+        return $"One for {name}, one for me.";
     }
 }
