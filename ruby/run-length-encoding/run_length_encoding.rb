@@ -22,4 +22,18 @@ class RunLengthEncoding
     end
     encoded_chars.join('')
   end
+
+  def self.decode(input)
+    split_input = input.scan(/\d+|\D{1}/)
+    new_string = ''
+
+    split_input.each_with_index do |encode, index|
+      if /\d+/ === encode
+        new_string += (split_input[index + 1] * encode.to_i)
+      elsif !(/\d+/ === split_input[index - 1])
+        new_string += encode
+      end
+    end
+    new_string
+  end
 end
